@@ -1,0 +1,6 @@
+<div class="select-container" [style.width]="width" [class.opened]="opened" (click)="$event.stopPropagation()" (document:click)="onToggle(false, $event)">
+  <div class="select-value" (click)="onToggle(!opened, $event)">{{ value }}</div>
+  <ul class="dropdown-list">
+    <li class="dropdown-item" *ngFor="let o of options" (click)="onClickValue(o)">{{ o }}</li>
+  </ul>
+</div>

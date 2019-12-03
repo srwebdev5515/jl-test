@@ -1,0 +1,33 @@
+<div class="table-header text-right">
+  <app-select width="200px"></app-select>
+</div>
+
+<table class="table table-border">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of currentUsers; trackBy: trackByFn; index as idx;">
+      <td>{{ user.id }}</td>
+      <td>
+        <img class="user-avatar" [src]="user.avatar" alt="" appImgError>
+        {{ user.firstName }}
+      </td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <app-paginator [total]="users?.length" [(countPerPage)]="perPage" [(page)]="curPage" (countPerPageChange)="filterUsers()" (pageChange)="filterUsers()"></app-paginator>
+      </td>
+    </tr>
+  </tfoot>
+</table>

@@ -1,0 +1,45 @@
+.pagination-container {
+  .paginator {
+    display: inline-flex;
+    align-items: center;
+    color: #ddd;
+    border: 1px solid;
+    border-radius: 4px;
+
+    &.count-per-pages {
+      float: right;
+    }
+
+    > div {
+      border-right: 1px solid #ddd;
+      width: 33px;
+      height: 33px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2680ff;
+      cursor: pointer;
+
+      &.active {
+        background-color: #2680ff;
+        color: white;
+        border: 1px solid #2680ff;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.button {
+        color: #2680ff;
+
+        &.disabled {
+          color: #999;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+}

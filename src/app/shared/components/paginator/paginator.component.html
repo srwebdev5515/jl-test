@@ -1,0 +1,29 @@
+<div class="pagination-container">
+  <div class="paginator" *ngIf="endPage > 1">
+    <div class="prev button" [class.disabled]="page == 1" (click)="prevPage()">
+      «
+    </div>
+    <div class="page-1" *ngIf="endPage > 3" [class.active]="page + 3 <= endPage" (click)="pageClicked(1)">
+      <span *ngIf="page + 3 < endPage">{{ page }}</span>
+      <span *ngIf="page + 3 >= endPage">{{ endPage - 3 }}</span>
+    </div>
+    <div class="page-2" *ngIf="endPage > 2" [class.active]="page == endPage - 2" (click)="pageClicked(2)">
+      <span *ngIf="page + 2 < endPage">{{ page + 1 }}</span>
+      <span *ngIf="page + 2 >= endPage">{{ endPage - 2 }}</span>
+    </div>
+    <div class="page-3" [class.active]="page == endPage - 1" (click)="pageClicked(3)">
+      <span *ngIf="page + 3 < endPage"> ... </span>
+      <span *ngIf="page + 3 >= endPage">{{ endPage - 1 }}</span>
+    </div>
+    <div class="page-4" [class.active]="page == endPage" (click)="pageClicked(4)">
+      <span>{{ endPage }}</span>
+    </div>
+    <div class="next button" [class.disabled]="page == endPage" (click)="nextPage()">
+      »
+    </div>
+  </div>
+
+  <div class="paginator count-per-pages">
+    <div [class.active]="p === countPerPage" (click)="onChangePerPage(p)" *ngFor="let p of pages">{{ p }}</div>
+  </div>
+</div>
