@@ -2,7 +2,7 @@ import { User } from '../../model';
 
 export const Users: User[] = [
   { id: 1, firstName: 'User 1', lastName: 'Test', avatar: '/assets/img/1.jpg', email: 'user1@test.com' },
-  { id: 2, firstName: 'User 2', lastName: 'Test', avatar: '/assets/img/1.jpg', email: 'user2@test.com' },
+  { id: 2, firstName: 'User 2', lastName: 'Test', avatar: '/assets/img/2.jpg', email: 'user2@test.com' },
   { id: 3, firstName: 'User 3', lastName: 'Test', avatar: '/assets/img/1.jpg', email: 'user3@test.com' },
   { id: 4, firstName: 'User 4', lastName: 'Test', avatar: '/assets/img/1.jpg', email: 'user4@test.com' },
   { id: 5, firstName: 'User 5', lastName: 'Test', avatar: '/assets/img/1.jpg', email: 'user5@test.com' },
